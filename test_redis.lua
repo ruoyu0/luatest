@@ -4,8 +4,10 @@ local redis = require "redis_iresty"
 local red = redis:new()
 
 print("########## connect redis success ##########")
-local ok, err = red:auth("7712572")
+
+local ok, err = red:auth("redis.conf")
 if not ok then ngx.say("failed to auth:", err) return end
+
 print("########## auth redis success ##########")
 
 local ok, err = red:set("dog", "an animal")
