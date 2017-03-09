@@ -1,2 +1,1 @@
-a = 3 and a = 1
-return a
+#### lua_test module
